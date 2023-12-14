@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+      #demo{
+        color: aqua;
+        font-size: 50px;
+      }
+    </style>
+  <p id="demo"></p>
+   
+    <script>
+//     let global = "Global variable";
+        
+//         function outest(x,y){
+//             let result = [x,y];
+//                  function outer(getResult){
+//                      let final = getResult;
+//                 function inner(finalResult){
+//                       let [x,y] = finalResult;
+//                       if (x > 10 ) {
+//                         console.log(x + " is greater than 10")
+//                       }else{
+//                         console.log(x + " is less than 10")
+//                       }
+
+//                       if (y > 10 ) {
+//                         console.log(y + " is greater than 10")
+//                       }else{
+//                         console.log(y + " is less than 10")
+//                       }
+
+//                 }
+//                 inner(final)
+//             }
+//             outer(result)
+//         }
+//         outest(6 , 8);
+//         outest(20 , 40);
+//         outest(20 , 1);
+//         outest(30 , 9);
+
+
+//         // x = 10;
+//         // document.getElementById("demo").innerHTML = x;
+//         // var x;
+
+
+//         function Car(a, b, c , d){
+//             this.carName = a;
+//             this.carModel = b;
+//             this.carWeight = c;
+//             this.carColor = d
+//             console.log(this.carName + " model name is " + this.carModel + "and its weight is " + this.carWeight + "and color is " + this.carColor )
+//         }
+
+
+//         var car01 = new Car('volvo', "430bmw", " 230 pound", "black")
+       
+
+//     // setInterval(() => {
+//     //   let carName = ["volvo", "neon", " Yahoo","banko","sinha","tering"];
+//     //     let a = carName[Math.floor(Math.random() * carName.length)] 
+
+//     //     let carModel = ["309jft", "598gti","665sst", "606hff", "560pst"];
+//     //     let b = carModel[Math.floor(Math.random() * carModel.length)];
+
+//     //     let carWeight = Math.floor( Math.random() * 4000);
+
+
+//     //     let carColor = ['red','yellow','black','blue','green'];
+//     //     let d = carColor[Math.floor(Math.random() * carColor.length)];
+//     //   new Car(a,b,carWeight,d);
+//     // }, 1000);
+
+
+//    let arrowFunc = val01 => "hello " + val01;
+//    console.log(arrowFunc("Rahim ", "Karim"));
+//    console.log(arrowFunc("Jason ", "Akrim"))
+    
+
+//    const iterableArrey = [1,2,3,4,5,6,7,8,9,0];
+
+//    for(let x of iterableArrey){
+//      console.log(x)
+
+//    }
+
+
+//  const promise1 = new Promise((resolve , reject)=>{
+//     let x = 10;
+//     if (x > 15) {
+//       resolve("x is grater than 15");
+//     }else{
+//       reject("x is less than 15");
+//     }
+//  })
+//  console.log(promise1)
+
+//  promise1.then((res)=>{
+//   console.log(res)
+//  })
+//  .catch(err =>{
+//   console.log(err)
+//  })
+
+//   // function restParamiter(...arrey){
+//   //     for(let x of arrey){
+//   //       console.log(x)
+//   //       document.getElementById("demo").innerHTML += x + "<br>";
+//   //     }
+//   // }
+  
+//   //  restParamiter('Amin Hossain','Bulbuly','Sakib Al Hasan','Doly','Emon Hossain')
+//   //  restParamiter(1,2,3,4,5)
+
+//   //  const fruit = {
+//   //   name : "Mango",
+//   //   type : "Rupali",
+//   //   weight : ".4 kg",
+//   //   color : "Green",
+//   //   position : "row"
+
+//   //  }
+//   const vehicleOne = {
+//   brand: 'Ford',
+//   model: 'Mustang',
+//   type: 'car',
+//   year: 2021, 
+//   color: 'red'
+// }
+
+// myVehicle(vehicleOne);
+
+// function myVehicle({type, color, brand, model}) {
+//   const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+
+//   document.getElementById("demo").innerHTML = message;
+// }
+
+let weight = 90;
+let newWeight = weight++ + weight++;
+
+console.log(newWeight); // 95
+console.log(weight); // 91
+
+
+let products = [
+    {name: 'iPhone', price: 900},
+    {name: 'Samsung Galaxy', price: 850},
+    {name: 'Sony Xperia', price: 700}
+];
+
+function compareBy(propertyName) {
+  // return function (a, b) {
+  //   // let x = a[propertyName],
+  //   //   y = b[propertyName];
+  //     console.log(a)
+
+  //   // if (x > y) {
+  //   //   return 1;
+  //   // } else if (x < y) {
+  //   //   return -1;
+  //   // } else {
+  //   //   return 0;
+  //   // }
+  // };
+  return function (a){
+    let x = a[propertyName];
+  console.log(x)
+  }
+ 
+}
+
+console.log('Products sorted by name:');
+products.sort(compareBy('price'));
+
+console.table(products);
+
+
+</script>
+</body>
+</html>
