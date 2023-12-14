@@ -1,5 +1,5 @@
 import React from 'react';
-import 'next/image';
+import Image from 'next/image';
 const Main = () => {
   return (
     <div class="max-w-[1440px] mx-auto">
@@ -208,10 +208,12 @@ const Main = () => {
       <div class="body_box md:p-10 bg-white rounded-[35px] -mt-20">
         <div class="image_gallery md:flex gap-4 px-4 mt-10 md:mt-0 md:space-y-0 space-y-2">
           <div class="img">
-            <img
+            <Image
               class="rounded-lg"
               src="/images/home/slider_image_01.webp"
               alt=""
+              width={800}
+              height={500}
             />
           </div>
           <div class="img">
