@@ -98,13 +98,13 @@ const Footer = () => {
               <ul class="text-gray-500 font-medium space-y-4">
                 <li class="text-white font-bold">Shop</li>
                 <li class="hover:text-white">
-                  <a href="#">Men's Eyeglasses</a>
+                  <a href="#">Men &apos s Eyeglasses</a>
                 </li>
                 <li class="hover:text-white">
-                  <a href="#">Women's Eyeglasses</a>
+                  <a href="#">Women &apos s Eyeglasses</a>
                 </li>
                 <li class="hover:text-white">
-                  <a href="#">Kids' Glasses</a>
+                  <a href="#">Kids &apos Glasses</a>
                 </li>
                 <li class="hover:text-white">
                   <a href="#">Transitions Lenses</a>
