@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Main = () => {
   return (
     <div class="max-w-[1440px] mx-auto">
-      <div class="hidden md:block main bg-[url('/images/home/head-banner.webp')] bg-center bg-cover py-10 pb-40">
+      <div class="hidden md:block main bg-[url('/images/home/head-banner.webp')] bg-center bg-cover py-10 md:pb-40">
         <div class="w-fit mb-14 m-auto">
           <h2 class="text-center mt-6 text-white text-3xl">
             Your Trip Starts Here
@@ -205,32 +205,20 @@ const Main = () => {
       </div>
 
       {/* <!-- ------------------body--------------- --> */}
-      <div class="body_box md:p-10 bg-white rounded-[35px] -mt-20">
+      <div class="body_box md:p-10 bg-white md:rounded-[35px] -mt-10 md:-mt-20">
         <div class="image_gallery md:flex gap-4 px-4 mt-10 md:mt-0 md:space-y-0 space-y-2">
           <div class="img">
-            <Image
+            <img
               class="rounded-lg"
               src="/images/home/slider_image_01.webp"
               alt=""
-              width={700}
-              height={500}
             />
           </div>
           <div class="img">
-            <Image
-              src="/images/home/slider_image_02.webp"
-              alt=""
-              width={700}
-              height={500}
-            />
+            <img src="./images/home/slider_image_02.webp" alt="" />
           </div>
           <div class="img">
-            <Image
-              src="/images/home/slider_image_01.webp"
-              alt=""
-              width={700}
-              height={500}
-            />
+            <img src="/images/home/slider_image_01.webp" alt="" />
           </div>
         </div>
         <div class="content_box bg-rose-50 mt-10 p-10">
@@ -316,18 +304,13 @@ const Main = () => {
                   class="rounded-tl-lg h-60 rounded-tr-lg"
                   src="/images/home/property_image_01.webp"
                   alt=""
-                  width={300}
+                  width={100}
                   height={300}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                <Image
-                  src="/images/five_star.png"
-                  alt=""
-                  width={20}
-                  height={20}
-                />
+                <img src="./images/five_star.png" alt="" />
               </div>
               <div class="flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -341,22 +324,15 @@ const Main = () => {
             </div>
             <div class="item bg-white pb-4 md:w-3/12">
               <div class="img">
-                <Image
+                <img
                   class="rounded-tl-lg rounded-tr-lg h-60 w-full"
-                  src="/images/home/property_image_02.webp"
+                  src="./images/home/property_image_02.webp"
                   alt=""
-                  width={300}
-                  height={300}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                <Image
-                  src="/images/five_star.png"
-                  alt=""
-                  width={20}
-                  height={20}
-                />
+                <img src="./images/five_star.png" alt="" />
               </div>
               <div class=" flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -370,22 +346,15 @@ const Main = () => {
             </div>
             <div class="item bg-white pb-4 md:w-3/12">
               <div class="img">
-                <Image
+                <img
                   class="rounded-tl-lg h-60 w-full rounded-tr-lg"
-                  src="/images/home/property_image_04..webp"
+                  src="./images/home/property_image_04..webp"
                   alt=""
-                  width={300}
-                  height={300}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                <Image
-                  src="/images/five_star.png"
-                  alt=""
-                  width={20}
-                  height={20}
-                />
+                <img src="./images/five_star.png" alt="" />
               </div>
               <div class=" flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -398,12 +367,10 @@ const Main = () => {
               </div>
             </div>
             <div class="item bg-white md:w-3/12 relative overflow-hidden">
-              <Image
+              <img
                 class="md:h-full rounded-md"
                 src="/images/home/property_image_03.png"
                 alt=""
-                width={300}
-                height={300}
               />
               <div class="absolute w-full h-32 bg-sky-500 bottom-0 blur-3xl"></div>
               <div class="absolute bottom-0 w-full flex justify-center items-center">
@@ -442,23 +409,16 @@ const Main = () => {
           <div class="card mt-10 md:flex justify-between space-y-4 md:space-y-0 gap-4">
             <div class="item bg-white pb-4">
               <div class="img">
-                <Image
+                <img
                   class="rounded-tl-lg rounded-tr-lg"
-                  src="/images/home/beauty_of_place01.webp"
+                  src="./images/home/beauty_of_place01.webp"
                   alt=""
-                  width={400}
-                  height={400}
                 />
               </div>
               <div class="p-4">
                 <div class="flex gap-2 mt-2">
                   <p>Hilton Atlanta</p>
-                  <Image
-                    src="/images/five_star.png"
-                    alt=""
-                    width={20}
-                    height={20}
-                  />
+                  <img src="./images/five_star.png" alt="" />
                 </div>
                 <div class=" flex gap-2 mt-4">
                   <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -470,23 +430,16 @@ const Main = () => {
             </div>
             <div class="item bg-white pb-4">
               <div class="img">
-                <Image
+                <img
                   class="rounded-tl-lg rounded-tr-lg"
-                  src="/images/home/beauty_of_place02.webp"
+                  src="./images/home/beauty_of_place02.webp"
                   alt=""
-                  width={400}
-                  height={400}
                 />
               </div>
               <div class="p-4">
                 <div class="flex gap-2 mt-2">
                   <p>Hilton Atlanta</p>
-                  <Image
-                    src="/images/five_star.png"
-                    alt=""
-                    width={20}
-                    height={20}
-                  />
+                  <img src="./images/five_star.png" alt="" />
                 </div>
                 <div class=" flex gap-2 mt-4">
                   <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -498,23 +451,16 @@ const Main = () => {
             </div>
             <div class="item bg-white pb-4">
               <div class="img">
-                <Image
+                <img
                   class="rounded-tl-lg rounded-tr-lg"
                   src="/images/home/beauty_of_place03.webp"
                   alt=""
-                  width={400}
-                  height={400}
                 />
               </div>
               <div class="p-4">
                 <div class="flex gap-2 mt-2">
                   <p>Hilton Atlanta</p>
-                  <Image
-                    src="/images/five_star.png"
-                    alt=""
-                    width={20}
-                    height={20}
-                  />
+                  <img src="./images/five_star.png" alt="" />
                 </div>
                 <div class=" flex gap-2 mt-4">
                   <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -526,12 +472,10 @@ const Main = () => {
             </div>
 
             <div class="item bg-white relative overflow-hidden bg-blue-500">
-              <Image
+              <img
                 class="md:h-full rounded-md"
                 src="/images/home/women_bath.png"
                 alt=""
-                width={400}
-                height={400}
               />
               <div class="absolute w-full h-32 bg-sky-500 bottom-0 blur-3xl"></div>
               <div class="absolute bottom-0 w-full flex justify-center items-center">
@@ -628,17 +572,15 @@ const Main = () => {
           <div class="card mt-10 md:flex justify-between space-y-4 md:space-y-0 gap-4">
             <div class="item md:w-3/12 bg-white pb-4">
               <div class="img">
-                <Image
+                <img
                   class="rounded-tl-lg rounded-tr-lg"
                   src="/images/home/car01.png"
                   alt=""
-                  width={400}
-                  height={400}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                {/* <img src="./images/five_star.png" alt="" /> */}
+                <img src="./images/five_star.png" alt="" />
               </div>
               <div class=" flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -652,17 +594,15 @@ const Main = () => {
             </div>
             <div class="item bg-white md:w-3/12 pb-4">
               <div class="img">
-                <Image
+                <img
                   class="rounded-tl-lg rounded-tr-lg"
                   src="/images/home/car02.png"
                   alt=""
-                  width={400}
-                  height={400}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                {/* <img src="./images/five_star.png" alt="" /> */}
+                <img src="./images/five_star.png" alt="" />
               </div>
               <div class=" flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -676,17 +616,15 @@ const Main = () => {
             </div>
             <div class="item bg-white md:w-3/12 pb-4">
               <div class="img">
-                <Image
+                <img
                   class="rounded-tl-lg rounded-tr-lg"
                   src="/images/home/car01.png"
                   alt=""
-                  width={400}
-                  height={400}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                {/* <img src="./images/five_star.png" alt="" /> */}
+                <img src="./images/five_star.png" alt="" />
               </div>
               <div class=" flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -699,12 +637,10 @@ const Main = () => {
               </div>
             </div>
             <div class="item md:w-3/12 bg-white relative overflow-hidden">
-              <Image
+              <img
                 class="md:h-full rounded-md"
                 src="/images/home/car03.png"
                 alt=""
-                width={400}
-                height={400}
               />
               <div class="absolute w-full h-32 bg-sky-500 bottom-0 blur-3xl"></div>
               <div class="absolute bottom-0 w-full flex justify-center items-center">
@@ -727,12 +663,10 @@ const Main = () => {
         <div class="bottom hidden md:block overflow-hidden h-[80vh] bg-[url('/images/home/bg_2.webp')] bg-center bg-no-repeat pt-20">
           <div class="container px-20 flex gap-10">
             <div class="item">
-              <Image
+              <img
                 class="w-96 rounded-t-[40px] border-[12px]"
                 src="/images/home/en-us-phone.jpg"
                 alt=""
-                width={400}
-                height={400}
               />
             </div>
             <div class="item mt-2">
@@ -775,27 +709,18 @@ const Main = () => {
                 </div>
                 <div class="right items-center flex gap-4 w-1/3 ml-10">
                   <div class="left">
-                    <Image
+                    <img
                       class="mb-4"
                       src="/images/home/android-en-us.png"
                       alt=""
-                      width={400}
-                      height={400}
                     />
-                    <Image
-                      src="/images/home/ios-en-us.png"
-                      alt=""
-                      width={400}
-                      height={400}
-                    />
+                    <img src="/images/home/ios-en-us.png" alt="" />
                   </div>
                   <div class="right">
-                    <Image
+                    <img
                       class="rounded-lg w-32 border-2"
                       src="/images/home/download.png"
                       alt=""
-                      width={400}
-                      height={400}
                     />
                   </div>
                 </div>

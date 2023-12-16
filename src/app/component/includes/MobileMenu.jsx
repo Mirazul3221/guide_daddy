@@ -1,377 +1,299 @@
-import React from 'react';
-import Search from './Search';
-const Menu = () => {
+'use client';
+import React, { useState } from 'react';
+import { LiaTimesSolid } from 'react-icons/lia';
+const MobileMenu = props => {
+  const [name, setName] = useState('');
   return (
-    <div>
-      <nav className="menu w-full mt-[5px]">
-        <div className="flex jsutify-between items-center gap-4 w-full">
-          <ul className="md:flex jsutify-between text-gray-600 font-medium items-center">
+    <div className="md:hiddden relative mt-4">
+      <nav className="menu w-full">
+        <LiaTimesSolid
+          className="w-6 h-6 absolute right-4"
+          onClick={() => {
+            props.setMenu(!props.menu);
+          }}
+        />
+        <div>
+          <ul className="text-gray-600 font-medium items-center">
             <li
-              data-name="eyeglass"
+              onClick={e => {
+                name !== e.target.innerText
+                  ? setName(e.target.innerText)
+                  : setName('');
+              }}
               className="header_menu_title hover:text-blac border-b-4 border-transparent hover:border-primary duration-300 hover:border-b-4 py-2 px-6"
             >
               <a href="#">Tours</a>
+
+              {/* <!-- -----------------eyeglass option box---------------------- --> */}
+
+              {name == 'Tours' && (
+                <div
+                  className={`w-full menue_list bg-white shadow-lg px-10 py-6 top-0 left-0 border-t-[2px]`}
+                >
+                  <div className="item bg-white">
+                    <ul className="space-y-2">
+                      <li className="text-gray-500 font-medium">Shop</li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Eyeglasses</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Women’s Eyeglasses</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Men’s Eyeglasses</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Kids’ Eyeglasses</a>
+                      </li>
+                      <li className="text-rose-500 hover:text-primary hover:underline">
+                        <a href="#">On Sale</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="item">
+                    <ul className="space-y-2">
+                      <li className="text-gray-500 font-medium">Featured</li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">New Arrivals</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Ray-Ban Glasses</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">2-Day Delivery</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Eyeglass Frames</a>
+                      </li>
+                      <li className="text-rose-500 hover:text-primary hover:underline">
+                        <a href="#">Eyeglass Frames</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              )}
             </li>
             <li
-              data-name="sunglass"
+              onClick={e => {
+                name !== e.target.innerText
+                  ? setName(e.target.innerText)
+                  : setName('');
+              }}
               className="header_menu_title hover:text-black border-b-4 border-transparent hover:border-primary duration-300 hover:border-b-4 py-2 px-6"
             >
               <a href="#">Cruise</a>
+
+              {name == 'Cruise' && (
+                <div
+                  data-list="sunglass"
+                  className="w-full menue_list bg-white shadow-lg px-10 py-6 top-0 left-0 border-t-[2px]"
+                >
+                  <div className="item bg-white">
+                    <ul className="space-y-2">
+                      <li className="text-gray-500 font-medium">Shop</li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Eyeglas</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Women’s Eyeglyogiyasses</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Men’sgsgz Eyeglasses</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Kids’ Eyeglasdgdsgses</a>
+                      </li>
+                      <li className="text-rose-500 hover:text-primary hover:underline">
+                        <a href="#">On Sadfgdfle</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="item">
+                    <ul className="space-y-2">
+                      <li className="text-gray-500 font-medium">Featured</li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">New Arhsetawrivals</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">Ray-Ban Gaewfwlasses</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">2-Day Delgegzwaivery</a>
+                      </li>
+                      <li className="hover:text-primary hover:underline">
+                        <a href="#">EyeglafwefGEss Frames</a>
+                      </li>
+                      <li className="text-rose-500 hover:text-primary hover:underline">
+                        <a href="#">EyeggWEHAlass Frames</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              )}
             </li>
             <li
-              data-name="premium"
+              onClick={e => {
+                name !== e.target.innerText
+                  ? setName(e.target.innerText)
+                  : setName('');
+              }}
               className="header_menu_title hover:text-black border-b-4 border-transparent hover:border-primary duration-300 hover:border-b-4 py-2 px-6"
             >
-              <a href="ride/bike" target="_blank">
-                Bikes
-              </a>
+              <a href="#">Bikes</a>
+              {name == 'Bikes' && (
+                <div className="w-full menue_list bg-white shadow-lg px-10 py-6 top-0 left-0 border-t-[2px]">
+                  <div className="container md:flex gap-4">
+                    {/* <!-- -------------single brand box-------------------------- --> */}
+                    <div className="item group overflow-hidden">
+                      <img
+                        className="rounded-md scale-100 hover:scale-105 duration-500"
+                        src="images/eyeglassbrand/Screenshot_5.png"
+                        alt=""
+                      />
+                      <p className="text-center group-hover:text-primary text-[18px] group-hover:underline mt-2">
+                        <a href="#"> Ray-Ban</a>
+                      </p>
+                    </div>
+                    {/* 
+                <!-- -------------single brand box-------------------------- --> */}
+                    <div className="item group overflow-hidden">
+                      <img
+                        className="rounded-md scale-100 hover:scale-105 duration-500"
+                        src="images/eyeglassbrand/Screenshot_1.png"
+                        alt=""
+                      />
+                      <p className="text-center group-hover:text-primary text-[18px] group-hover:underline mt-2">
+                        <a href="#"> Oakley</a>
+                      </p>
+                    </div>
+
+                    {/* <!-- -------------single brand box-------------------------- --> */}
+                    <div className="item group overflow-hidden">
+                      <img
+                        className="rounded-md scale-100 hover:scale-105 duration-500"
+                        src="./images/eyeglassbrand/Screenshot_2.png"
+                        alt=""
+                      />
+                      <p className="text-center group-hover:text-primary text-[18px] group-hover:underline mt-2">
+                        <a href="#"> ARNETTE</a>
+                      </p>
+                    </div>
+
+                    {/* <!-- -------------single brand box-------------------------- --> */}
+                    <div className="item group overflow-hidden">
+                      <img
+                        className="rounded-md scale-100 hover:scale-105 duration-500"
+                        src="images/eyeglassbrand/Screenshot_3.png"
+                        alt=""
+                      />
+                      <p className="text-center group-hover:text-primary text-[18px] group-hover:underline mt-2">
+                        <a href="#"> Vogue Eyewear</a>
+                      </p>
+                    </div>
+
+                    {/* <!-- -------------single brand box-------------------------- --> */}
+                    <div className="item group overflow-hidden">
+                      <img
+                        className="rounded-md scale-100 hover:scale-105 duration-500"
+                        src="images/eyeglassbrand/Screenshot_4.png"
+                        alt=""
+                      />
+                      <p className="text-center group-hover:text-primary text-[18px] group-hover:underline mt-2">
+                        <a href="#">RFLKT</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
             </li>
             <li
-              data-name="lenses"
+              onClick={e => {
+                name !== e.target.innerText
+                  ? setName(e.target.innerText)
+                  : setName('');
+              }}
               className="header_menu_title hover:text-black border-b-4 border-transparent hover:border-primary duration-300 hover:border-b-4 py-2 px-6"
             >
               <a href="#">Others</a>
+              {name == 'Others' && (
+                <div className="w-full menue_list bg-white shadow-lg px-10 py-6 border-t-[2px]">
+                  <div className="item">
+                    <h2 className="text-gray-500 mb-2 font-medium">
+                      Most Popular
+                    </h2>
+                    <div>
+                      <ul className="space-y-2">
+                        <li className="group hover:text-primary hover:underline">
+                          <a href="#">
+                            Polarized Sunglasses
+                            <span className="text-[10px] text-white bg-primary group-hover:no-underline px-2 py-[2px]">
+                              POPULAR
+                            </span>
+                          </a>
+                        </li>
+                        <li className="hover:text-primary hover:underline">
+                          <a href="#">Blue Light Glasses</a>
+                        </li>
+                        <li className="hover:text-primary hover:underline">
+                          <a href="#">Reading Glasses</a>
+                        </li>
+                        <li className="hover:text-primary hover:underline">
+                          <a href="#">Transitions®</a>
+                        </li>
+                      </ul>
+                      <ul className="space-y-2">
+                        <li className="hover:text-primary hover:underline">
+                          <a href="#">Bifocal Lenses</a>
+                        </li>
+                        <li className="hover:text-primary hover:underline">
+                          <a href="#">Progressive Lenses</a>
+                        </li>
+                        <li className="hover:text-primary hover:underline">
+                          <a href="#">Prism Lenses</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="">
+                    <h2 className="text-gray-500 mb-2 font-medium">Coatings</h2>
+                    <div className="">
+                      <ul className="space-y-2">
+                        <li className="hover:text-primary hover:underline">
+                          <a href="#">Anti-Reflective Coating</a>
+                        </li>
+                        <li className="hover:text-primary hover:underline">
+                          <a href="#">Mirrored Sunglasses</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="overflow-hidden relative">
+                    <img
+                      className="rounded-md w-60 z-50 scale-100 duration-300 hover:scale-105"
+                      src="images/Screenshot_6.png"
+                      alt=""
+                    />
+                    <p className="absolute bottom-[10%] w-full text-center text-white hover:underline">
+                      <a href="#">EBD Clear Premium</a>
+                    </p>
+                  </div>
+                </div>
+              )}
             </li>
             <li
               data-name="search"
               className="header_menu_title hover:text-black border-b-4 border-transparent duration-300 py-2 px-6"
             >
-              <div className="hidden md:block">
+              {/* <div className="hidden md:block">
                 <Search />
-              </div>
+              </div> */}
             </li>
           </ul>
         </div>
 
         <div className="menu-item relative mx-20 w-full ml-0">
-          {/* <!-- -----------------eyeglass option box---------------------- --> */}
-          <div
-            data-list="eyeglass"
-            className="w-full hidden menue_list z-80 absolute bg-white shadow-lg px-10 py-6 flex top-0 left-0 border-t-[2px]"
-          >
-            <div className="item w-3/12 bg-white">
-              <ul className="space-y-2">
-                <li className="text-gray-500 font-medium">Shop</li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Eyeglasses</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Women’s Eyeglasses</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Men’s Eyeglasses</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Kids’ Eyeglasses</a>
-                </li>
-                <li className="text-rose-500 hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">On Sale</a>
-                </li>
-              </ul>
-            </div>
-            <div className="item w-3/12">
-              <ul className="space-y-2">
-                <li className="text-gray-500 font-medium">Featured</li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">New Arrivals</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Ray-Ban Glasses</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">2-Day Delivery</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Eyeglass Frames</a>
-                </li>
-                <li className="text-rose-500 hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Eyeglass Frames</a>
-                </li>
-              </ul>
-            </div>
-            <div className="item w-6/12 flex gap-6">
-              <div className="overflow-hidden relative">
-                <img
-                  className="rounded-md z-50 scale-100 duration-300 hover:scale-105"
-                  src="./images/EBD_Clear_Premium_d39e966242.avif"
-                  alt=""
-                />
-                <p className="absolute bottom-[10%] w-full text-center text-white hover:underline">
-                  <a href="#">EBD Clear Premium</a>
-                </p>
-              </div>
-
-              <div className="overflow-hidden relative">
-                <img
-                  className="rounded-md z-50 scale-100 duration-300 hover:scale-105"
-                  src="./images/Bio_Nylon_3ef215101a.avif"
-                  alt=""
-                />
-                <p className="absolute bottom-[10%] w-full text-center text-white hover:underline">
-                  <a href="#">EBD Clear Premium</a>
-                </p>
-              </div>
-
-              <div className="overflow-hidden relative">
-                <img
-                  className="rounded-md z-50 scale-100 duration-300 hover:scale-105"
-                  src="./images/Vintage_Spirit_7a6175bd12.avif"
-                  alt=""
-                />
-                <p className="absolute bottom-[10%] w-full text-center text-white hover:underline">
-                  <a href="#">EBD Clear Premium</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* <!-- -----------------sunglass option box---------------------- --> */}
-          <div
-            data-list="sunglass"
-            className="w-full hidden menue_list z-50 absolute bg-white shadow-lg px-10 py-6 flex top-0 left-0 border-t-[2px]"
-          >
-            <div className="item w-3/12 bg-white">
-              <ul className="space-y-2">
-                <li className="text-gray-500 font-medium">Shop</li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Eyeglas</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Women’s Eyeglyogiyasses</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Men’sgsgz Eyeglasses</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Kids’ Eyeglasdgdsgses</a>
-                </li>
-                <li className="text-rose-500 hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">On Sadfgdfle</a>
-                </li>
-              </ul>
-            </div>
-            <div className="item w-3/12">
-              <ul className="space-y-2">
-                <li className="text-gray-500 font-medium">Featured</li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">New Arhsetawrivals</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">Ray-Ban Gaewfwlasses</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">2-Day Delgegzwaivery</a>
-                </li>
-                <li className="hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">EyeglafwefGEss Frames</a>
-                </li>
-                <li className="text-rose-500 hover:text-primary hover:underline">
-                  {' '}
-                  <a href="#">EyeggWEHAlass Frames</a>
-                </li>
-              </ul>
-            </div>
-            <div className="item w-6/12 flex gap-6">
-              <div className="overflow-hidden relative">
-                <img
-                  className="rounded-md z-50 scale-100 duration-300 hover:scale-105"
-                  src="./images/Bio_Nylon_3ef215101a.avif"
-                  alt=""
-                />
-                <p className="absolute bottom-[10%] w-full text-center text-white hover:underline">
-                  <a href="#">EBD Clear Premium</a>
-                </p>
-              </div>
-
-              <div className="overflow-hidden relative">
-                <img
-                  className="rounded-md z-50 scale-100 duration-300 hover:scale-105"
-                  src="./images/EBD_Clear_Premium_d39e966242.avif"
-                  alt=""
-                  srcset=""
-                />
-                <p className="absolute bottom-[10%] w-full text-center text-white hover:underline">
-                  <a href="#">EBD Clear Premium</a>
-                </p>
-              </div>
-
-              <div className="overflow-hidden relative">
-                <img
-                  className="rounded-md z-50 scale-100 duration-300 hover:scale-105"
-                  src="./images/Vintage_Spirit_7a6175bd12.avif"
-                  alt=""
-                />
-                <p className="absolute bottom-[10%] w-full text-center text-white hover:underline">
-                  <a href="#">EBD Clear Premium</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* <!-- -----------------premium option box---------------------- --> */}
-          <div
-            data-list="premium"
-            className="w-full hidden menue_list absolute z-50 bg-white shadow-lg px-10 py-6 flex top-0 left-0 border-t-[2px]"
-          >
-            <div className="container md:flex gap-4">
-              {/* <!-- -------------single brand box-------------------------- --> */}
-              <div className="item group overflow-hidden">
-                <img
-                  className="rounded-md scale-100 hover:scale-105 duration-500"
-                  src="images/eyeglassbrand/Screenshot_5.png"
-                  alt=""
-                />
-                <p className="text-center group-hover:text-primary text-[18px] group-hover:underline mt-2">
-                  {' '}
-                  <a href="#"> Ray-Ban</a>
-                </p>
-              </div>
-              {/* 
-                <!-- -------------single brand box-------------------------- --> */}
-              <div className="item group overflow-hidden">
-                <img
-                  className="rounded-md scale-100 hover:scale-105 duration-500"
-                  src="images/eyeglassbrand/Screenshot_1.png"
-                  alt=""
-                />
-                <p className="text-center group-hover:text-primary text-[18px] group-hover:underline mt-2">
-                  {' '}
-                  <a href="#"> Oakley</a>
-                </p>
-              </div>
-
-              {/* <!-- -------------single brand box-------------------------- --> */}
-              <div className="item group overflow-hidden">
-                <img
-                  className="rounded-md scale-100 hover:scale-105 duration-500"
-                  src="./images/eyeglassbrand/Screenshot_2.png"
-                  alt=""
-                />
-                <p className="text-center group-hover:text-primary text-[18px] group-hover:underline mt-2">
-                  {' '}
-                  <a href="#"> ARNETTE</a>
-                </p>
-              </div>
-
-              {/* <!-- -------------single brand box-------------------------- --> */}
-              <div className="item group overflow-hidden">
-                <img
-                  className="rounded-md scale-100 hover:scale-105 duration-500"
-                  src="images/eyeglassbrand/Screenshot_3.png"
-                  alt=""
-                />
-                <p className="text-center group-hover:text-primary text-[18px] group-hover:underline mt-2">
-                  {' '}
-                  <a href="#"> Vogue Eyewear</a>
-                </p>
-              </div>
-
-              {/* <!-- -------------single brand box-------------------------- --> */}
-              <div className="item group overflow-hidden">
-                <img
-                  className="rounded-md scale-100 hover:scale-105 duration-500"
-                  src="images/eyeglassbrand/Screenshot_4.png"
-                  alt=""
-                />
-                <p className="text-center group-hover:text-primary text-[18px] group-hover:underline mt-2">
-                  {' '}
-                  <a href="#">RFLKT</a>
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* <!-- -----------------lenses option box---------------------- --> */}
-          <div
-            data-list="lenses"
-            className="w-full menue_list hidden absolute z-50 bg-white shadow-lg px-10 py-6 flex justify-between top-0 left-0 border-t-[2px]"
-          >
-            <div className="item">
-              <h2 className="text-gray-500 mb-2 font-medium">Most Popular</h2>
-              <div className="flex gap-4">
-                <ul className="space-y-2">
-                  <li className="group hover:text-primary hover:underline">
-                    {' '}
-                    <a href="#">
-                      Polarized Sunglasses
-                      <span className="text-[10px] text-white bg-primary group-hover:no-underline px-2 py-[2px]">
-                        POPULAR
-                      </span>
-                    </a>
-                  </li>
-                  <li className="hover:text-primary hover:underline">
-                    {' '}
-                    <a href="#">Blue Light Glasses</a>
-                  </li>
-                  <li className="hover:text-primary hover:underline">
-                    {' '}
-                    <a href="#">Reading Glasses</a>
-                  </li>
-                  <li className="hover:text-primary hover:underline">
-                    {' '}
-                    <a href="#">Transitions®</a>
-                  </li>
-                </ul>
-                <ul className="space-y-2">
-                  <li className="hover:text-primary hover:underline">
-                    {' '}
-                    <a href="#">Bifocal Lenses</a>
-                  </li>
-                  <li className="hover:text-primary hover:underline">
-                    {' '}
-                    <a href="#">Progressive Lenses</a>
-                  </li>
-                  <li className="hover:text-primary hover:underline">
-                    {' '}
-                    <a href="#">Prism Lenses</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="">
-              <h2 className="text-gray-500 mb-2 font-medium">Coatings</h2>
-              <div className="">
-                <ul className="space-y-2">
-                  <li className="hover:text-primary hover:underline">
-                    {' '}
-                    <a href="#">Anti-Reflective Coating</a>
-                  </li>
-                  <li className="hover:text-primary hover:underline">
-                    {' '}
-                    <a href="#">Mirrored Sunglasses</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="overflow-hidden relative">
-              <img
-                className="rounded-md w-60 z-50 scale-100 duration-300 hover:scale-105"
-                src="images/Screenshot_6.png"
-                alt=""
-              />
-              <p className="absolute bottom-[10%] w-full text-center text-white hover:underline">
-                <a href="#">EBD Clear Premium</a>
-              </p>
-            </div>
-          </div>
         </div>
 
         <div
@@ -382,37 +304,31 @@ const Menu = () => {
             <ul className="flex gap-5 py-4">
               <li className="text-gray-500">Sugested Queries</li>
               <li className="bg-gray-200 py-[2px] rounded-full px-4  hover:text-primary">
-                {' '}
                 <a href="#" className=" hover:border-b-2 hover:border-primary">
                   clear
                 </a>
               </li>
               <li className="bg-gray-200 py-[2px] rounded-full px-4  hover:text-primary">
-                {' '}
                 <a href="#" className=" hover:border-b-2 hover:border-primary">
                   cat eyeglass
                 </a>
               </li>
               <li className="bg-gray-200 py-[2px] rounded-full px-4  hover:text-primary">
-                {' '}
                 <a href="#" className=" hover:border-b-2 hover:border-primary">
                   daydream
                 </a>
               </li>
               <li className="bg-gray-200 py-[2px] rounded-full px-4  hover:text-primary">
-                {' '}
                 <a href="#" className=" hover:border-b-2 hover:border-primary">
                   aviator
                 </a>
               </li>
               <li className="bg-gray-200 py-[2px] rounded-full px-4  hover:text-primary">
-                {' '}
                 <a href="#" className=" hover:border-b-2 hover:border-primary">
                   sunglasses
                 </a>
               </li>
               <li className="bg-gray-200 py-[2px] rounded-full px-4  hover:text-primary">
-                {' '}
                 <a href="#" className=" hover:border-b-2 hover:border-primary">
                   heart
                 </a>
@@ -427,7 +343,6 @@ const Menu = () => {
                   <img src="./images/eyeglass/Screenshot_1.png" alt="" />
                   <div className="flex justify-between px-4">
                     <p>
-                      {' '}
                       <a
                         className=" hover:border-b-2 hover:border-primary"
                         href="#"
@@ -443,13 +358,12 @@ const Menu = () => {
                   <img src="./images/eyeglass/Screenshot_2.png" alt="" />
                   <div className="flex justify-between px-4">
                     <p>
-                      {' '}
                       <a
                         className=" hover:border-b-2 hover:border-primary"
                         href="#"
                       >
                         Drums
-                      </a>{' '}
+                      </a>
                     </p>
                     <p>6$</p>
                   </div>
@@ -459,13 +373,11 @@ const Menu = () => {
                   <img src="./images/eyeglass/Screenshot_3.png" alt="" />
                   <div className="flex justify-between px-4">
                     <p>
-                      {' '}
                       <a
                         className=" hover:border-b-2 hover:border-primary"
                         href="#"
                       >
-                        {' '}
-                        Saint Lau{' '}
+                        Saint Lau
                       </a>
                     </p>
                     <p>6$</p>
@@ -476,13 +388,11 @@ const Menu = () => {
                   <img src="./images/eyeglass/Screenshot_4.png" alt="" />
                   <div className="flex justify-between px-4">
                     <p>
-                      {' '}
                       <a
                         className=" hover:border-b-2 hover:border-primary"
                         href="#"
                       >
-                        {' '}
-                        Saint Lau{' '}
+                        Saint Lau
                       </a>
                     </p>
                     <p>6$</p>
@@ -493,13 +403,11 @@ const Menu = () => {
                   <img src="./images/eyeglass/Screenshot_5.png" alt="" />
                   <div className="flex justify-between px-4">
                     <p>
-                      {' '}
                       <a
                         className=" hover:border-b-2 hover:border-primary"
                         href="#"
                       >
-                        {' '}
-                        Saint Lau{' '}
+                        Saint Lau
                       </a>
                     </p>
                     <p>6$</p>
@@ -510,13 +418,11 @@ const Menu = () => {
                   <img src="./images/eyeglass/Screenshot_6.png" alt="" />
                   <div className="flex justify-between px-4">
                     <p>
-                      {' '}
                       <a
                         className=" hover:border-b-2 hover:border-primary"
                         href="#"
                       >
-                        {' '}
-                        Saint Lau{' '}
+                        Saint Lau
                       </a>
                     </p>
                     <p>6$</p>
@@ -528,11 +434,10 @@ const Menu = () => {
               <h2 className="mb-4">Recommended</h2>
               <img src="./images/eyeglass/Screenshot_7.png" alt="" />
               <p className="hover:text-primary hover:underline mt-4 inline-block">
-                <a href="">blue light filtering glasses </a>{' '}
+                <a href="">blue light filtering glasses </a>
               </p>
               <div className="mt-4">
                 <h2 className="text-primary underline my-2 inline-block">
-                  {' '}
                   <a href="#">FAQ</a>
                 </h2>
                 <div className="">
@@ -624,7 +529,7 @@ const Menu = () => {
           <img className="w-full" src="./images/Screenshot_3.png" alt="" />
         </div>
         <div className="flex items-center mt-2 gap-2">
-          <p>Do not have a account?</p>{' '}
+          <p>Do not have a account?</p>
           <a
             className="hover:text-primary text-gray-500 underline my-2 "
             href="#"
@@ -644,27 +549,21 @@ const Menu = () => {
           </h2>
           <ul className="space-y-2 mt-4">
             <li className="py-[2px] px-4 text-[16px] text-gray-700 hover:underline hover:text-primary">
-              {' '}
               <a href="#">How to Measure Frame Size</a>
             </li>
             <li className="py-[2px] px-4 text-[16px] text-gray-700 hover:underline hover:text-primary">
-              {' '}
               <a href="#">How to Read Your Prescription</a>
             </li>
             <li className="py-[2px] px-4 text-[16px] text-gray-700 hover:underline hover:text-primary">
-              {' '}
               <a href="#">Match Frames & Face Shape</a>
             </li>
             <li className="py-[2px] px-4 text-[16px] text-gray-700 hover:underline hover:text-primary">
-              {' '}
               <a href="#">Shipping & Returns</a>
             </li>
             <li className="py-[2px] px-4 text-[16px] text-gray-700 hover:underline hover:text-primary">
-              {' '}
               <a href="#">Track Your Order</a>
             </li>
             <li className="py-[2px] px-4 text-[16px] text-gray-700 hover:underline hover:text-primary">
-              {' '}
               <a href="#">Tips & Guides</a>
             </li>
           </ul>
@@ -763,4 +662,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default MobileMenu;
