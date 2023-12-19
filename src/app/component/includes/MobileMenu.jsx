@@ -1,17 +1,21 @@
 'use client';
 import React, { useState } from 'react';
 import { LiaTimesSolid } from 'react-icons/lia';
+import { IoIosArrowForward } from 'react-icons/io';
 const MobileMenu = props => {
   const [name, setName] = useState('');
   return (
-    <div className="md:hiddden relative mt-4">
-      <nav className="menu w-full">
+    <div className="md:hiddden relative mt-6">
+      <div className="flex justify-between items-center mx-4 pb-2">
+        <div className="btn py-[3px] px-5 bg-sky-500 text-white">Sign In</div>
         <LiaTimesSolid
-          className="w-6 h-6 absolute right-4"
+          className="w-8 h-8 bg-gray-200 text-gray-500 p-[3px] rounded-full"
           onClick={() => {
             props.setMenu(!props.menu);
           }}
         />
+      </div>
+      <nav className="menu w-full">
         <div>
           <ul className="text-gray-600 font-medium items-center">
             <li
@@ -22,7 +26,16 @@ const MobileMenu = props => {
               }}
               className="header_menu_title hover:text-blac border-b-4 border-transparent hover:border-primary duration-300 hover:border-b-4 py-2 px-6"
             >
-              <a href="#">Tours</a>
+              <div className="flex justify-between">
+                <a href="#">Tours</a>{' '}
+                <div className="icone">
+                  <IoIosArrowForward
+                    className={`${
+                      name == 'Tours' ? 'rotate-90' : 'rotate-0'
+                    } duration-200`}
+                  />
+                </div>
+              </div>
 
               {/* <!-- -----------------eyeglass option box---------------------- --> */}
 
@@ -81,13 +94,19 @@ const MobileMenu = props => {
               }}
               className="header_menu_title hover:text-black border-b-4 border-transparent hover:border-primary duration-300 hover:border-b-4 py-2 px-6"
             >
-              <a href="#">Cruise</a>
+              <div className="flex justify-between">
+                <a href="#">Cruise</a>{' '}
+                <div className="icone">
+                  <IoIosArrowForward
+                    className={`${
+                      name == 'Cruise' ? 'rotate-90' : 'rotate-0'
+                    } duration-200`}
+                  />
+                </div>
+              </div>
 
               {name == 'Cruise' && (
-                <div
-                  data-list="sunglass"
-                  className="w-full menue_list bg-white shadow-lg px-10 py-6 top-0 left-0 border-t-[2px]"
-                >
+                <div className="w-full menue_list duration-500 bg-white shadow-lg px-10 py-6 top-0 left-0 border-t-[2px]">
                   <div className="item bg-white">
                     <ul className="space-y-2">
                       <li className="text-gray-500 font-medium">Shop</li>
@@ -139,7 +158,16 @@ const MobileMenu = props => {
               }}
               className="header_menu_title hover:text-black border-b-4 border-transparent hover:border-primary duration-300 hover:border-b-4 py-2 px-6"
             >
-              <a href="#">Bikes</a>
+              <div className="flex justify-between">
+                <a href="#">Bikes</a>{' '}
+                <div className="icone">
+                  <IoIosArrowForward
+                    className={`${
+                      name == 'Bikes' ? 'rotate-90' : 'rotate-0'
+                    } duration-200`}
+                  />
+                </div>
+              </div>
               {name == 'Bikes' && (
                 <div className="w-full menue_list bg-white shadow-lg px-10 py-6 top-0 left-0 border-t-[2px]">
                   <div className="container md:flex gap-4">
@@ -214,7 +242,16 @@ const MobileMenu = props => {
               }}
               className="header_menu_title hover:text-black border-b-4 border-transparent hover:border-primary duration-300 hover:border-b-4 py-2 px-6"
             >
-              <a href="#">Others</a>
+              <div className="flex justify-between">
+                <a href="#">Others</a>{' '}
+                <div className="icone">
+                  <IoIosArrowForward
+                    className={`${
+                      name == 'Others' ? 'rotate-90' : 'rotate-0'
+                    } duration-200`}
+                  />
+                </div>
+              </div>
               {name == 'Others' && (
                 <div className="w-full menue_list bg-white shadow-lg px-10 py-6 border-t-[2px]">
                   <div className="item">

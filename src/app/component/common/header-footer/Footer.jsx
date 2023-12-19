@@ -432,7 +432,7 @@ const Footer = () => {
 
         <div class="bottom">
           <div class="footer flex justify-between text-gray-500">
-            <ul class="text-[11px] flex">
+            <ul class="text-[11px] md:flex">
               <li class="hover:underline px-2">
                 <a href="#">Privacy Policy</a>
               </li>

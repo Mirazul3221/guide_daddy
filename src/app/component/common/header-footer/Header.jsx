@@ -77,7 +77,7 @@ const Header = () => {
           </div>
         </div>
         <div
-          className={`fixed top-0 duration-500 ${
+          className={`fixed z-50 top-0 duration-500 ${
             menu ? 'left-0' : 'left-[100%]'
           } w-screen h-screen bg-white overflow-y-scroll`}
         >

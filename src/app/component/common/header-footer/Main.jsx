@@ -300,12 +300,10 @@ const Main = () => {
           <div class="card mt-10 md:flex justify-between space-y-4 md:space-y-0 gap-4">
             <div class="item bg-white pb-4 md:w-3/12">
               <div class="img">
-                <Image
+                <img
                   class="rounded-tl-lg h-60 rounded-tr-lg"
                   src="/images/home/property_image_01.webp"
                   alt=""
-                  width={100}
-                  height={300}
                 />
               </div>
               <div class="flex gap-2 mt-2">
