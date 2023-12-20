@@ -106,7 +106,7 @@ const MobileMenu = props => {
               </div>
 
               {name == 'Cruise' && (
-                <div className="w-full menue_list duration-500 bg-white shadow-lg px-10 py-6 top-0 left-0 border-t-[2px]">
+                <div className="w-full com menue_list duration-500 bg-white shadow-lg px-10 py-6 top-0 left-0 border-t-[2px]">
                   <div className="item bg-white">
                     <ul className="space-y-2">
                       <li className="text-gray-500 font-medium">Shop</li>
