@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 const Main = () => {
   return (
     <div class="max-w-[1440px] mx-auto">
@@ -211,14 +211,26 @@ const Main = () => {
             <Image
               class="rounded-lg"
               src="/images/home/slider_image_01.webp"
-              alt=""
+              alt="hdgdhg"
+              width={400}
+              height={100}
             />
           </div>
           <div class="img">
-            <Image src="./images/home/slider_image_02.webp" alt="" />
+            <Image
+              src="/images/home/slider_image_02.webp"
+              width={400}
+              height={100}
+              alt="gsdgs"
+            />
           </div>
           <div class="img">
-            <Image src="/images/home/slider_image_01.webp" alt="" />
+            <Image
+              src="/images/home/slider_image_01.webp"
+              width={400}
+              height={100}
+              alt="vdsgs"
+            />
           </div>
         </div>
         <div class="content_box bg-rose-50 mt-10 p-10">
@@ -303,12 +315,19 @@ const Main = () => {
                 <Image
                   class="rounded-tl-lg h-60 rounded-tr-lg"
                   src="/images/home/property_image_01.webp"
-                  alt=""
+                  alt="dfgdh"
+                  width={400}
+                  height={100}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                <Image src="./images/five_star.png" alt="" />
+                <Image
+                  src="/images/home/five_star.png"
+                  alt="afsafv"
+                  width={50}
+                  height={100}
+                />
               </div>
               <div class="flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -324,13 +343,16 @@ const Main = () => {
               <div class="img">
                 <Image
                   class="rounded-tl-lg rounded-tr-lg h-60 w-full"
-                  src="./images/home/property_image_02.webp"
-                  alt=""
+                  src="/images/home/property_image_02.webp"
+                  alt="adgfm]/lkh"
+                  width={300}
+                  height={100}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                <Image src="./images/five_star.png" alt="" />
+                <Image src="/images/home/five_star.png" alt="gsga"             width={50}
+              height={100} />
               </div>
               <div class=" flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -346,13 +368,16 @@ const Main = () => {
               <div class="img">
                 <Image
                   class="rounded-tl-lg h-60 w-full rounded-tr-lg"
-                  src="./images/home/property_image_04..webp"
-                  alt=""
+                  src="/images/home/property_image_04..webp"
+                  alt="rhgaes"
+                  width={300}
+                  height={100}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                <Image src="./images/five_star.png" alt="" />
+                <Image src="/images/home/five_star.png" alt="gshdsaw"             width={50}
+              height={100}/>
               </div>
               <div class=" flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -368,7 +393,9 @@ const Main = () => {
               <Image
                 class="md:h-full rounded-md"
                 src="/images/home/property_image_03.png"
-                alt=""
+                alt="fsb"
+                width={400}
+                height={500}
               />
               <div class="absolute w-full h-32 bg-sky-500 bottom-0 blur-3xl"></div>
               <div class="absolute bottom-0 w-full flex justify-center items-center">
@@ -409,14 +436,17 @@ const Main = () => {
               <div class="img">
                 <Image
                   class="rounded-tl-lg rounded-tr-lg"
-                  src="./images/home/beauty_of_place01.webp"
-                  alt=""
+                  src="/images/home/beauty_of_place01.webp"
+                  alt="sgbsf"
+                  width={400}
+                  height={100}
                 />
               </div>
               <div class="p-4">
                 <div class="flex gap-2 mt-2">
                   <p>Hilton Atlanta</p>
-                  <Image src="./images/five_star.png" alt="" />
+                  <Image src="/images/home/five_star.png" alt="vdzbvad"             width={50}
+              height={100} />
                 </div>
                 <div class=" flex gap-2 mt-4">
                   <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -430,14 +460,17 @@ const Main = () => {
               <div class="img">
                 <Image
                   class="rounded-tl-lg rounded-tr-lg"
-                  src="./images/home/beauty_of_place02.webp"
-                  alt=""
+                  src="/images/home/beauty_of_place02.webp"
+                  alt="sfbkdl"
+                  width={400}
+                  height={100}
                 />
               </div>
               <div class="p-4">
                 <div class="flex gap-2 mt-2">
                   <p>Hilton Atlanta</p>
-                  <Image src="./images/five_star.png" alt="" />
+                  <Image src="/images/home/five_star.png" alt="gdsnmvsjk"             width={50}
+              height={100} />
                 </div>
                 <div class=" flex gap-2 mt-4">
                   <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -452,13 +485,16 @@ const Main = () => {
                 <Image
                   class="rounded-tl-lg rounded-tr-lg"
                   src="/images/home/beauty_of_place03.webp"
-                  alt=""
+                  alt="hkdfgblk"
+                  width={400}
+                  height={100}
                 />
               </div>
               <div class="p-4">
                 <div class="flex gap-2 mt-2">
                   <p>Hilton Atlanta</p>
-                  <Image src="./images/five_star.png" alt="" />
+                  <Image src="/images/home/five_star.png" alt="gs,nmmb"             width={50}
+              height={100} />
                 </div>
                 <div class=" flex gap-2 mt-4">
                   <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -473,7 +509,9 @@ const Main = () => {
               <Image
                 class="md:h-full rounded-md"
                 src="/images/home/women_bath.png"
-                alt=""
+                alt="dg"
+                width={400}
+                height={100}
               />
               <div class="absolute w-full h-32 bg-sky-500 bottom-0 blur-3xl"></div>
               <div class="absolute bottom-0 w-full flex justify-center items-center">
@@ -573,12 +611,15 @@ const Main = () => {
                 <Image
                   class="rounded-tl-lg rounded-tr-lg"
                   src="/images/home/car01.png"
-                  alt=""
+                  alt="sgdbfl"
+                  width={300}
+                  height={100}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                <Image src="./images/five_star.png" alt="" />
+                <Image src="/images/home/five_star.png" alt="agmsnk"             width={50}
+              height={100} />
               </div>
               <div class=" flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -595,12 +636,15 @@ const Main = () => {
                 <Image
                   class="rounded-tl-lg rounded-tr-lg"
                   src="/images/home/car02.png"
-                  alt=""
+                  alt="gsbgskj"
+                  width={500}
+                  height={100}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                <Image src="./images/five_star.png" alt="" />
+                <Image src="/images/home/five_star.png" alt="gsnmmmsna"             width={50}
+              height={100} />
               </div>
               <div class=" flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -617,12 +661,15 @@ const Main = () => {
                 <Image
                   class="rounded-tl-lg rounded-tr-lg"
                   src="/images/home/car01.png"
-                  alt=""
+                  alt="sn,bdfkj"
+                  width={300}
+                  height={100}
                 />
               </div>
               <div class="flex gap-2 mt-2">
                 <p>Hilton Atlanta</p>
-                <Image src="./images/five_star.png" alt="" />
+                <Image src="/images/home/five_star.png" alt="sdnbdk"             width={50}
+              height={100} />
               </div>
               <div class=" flex gap-2">
                 <p class="rounded-l-full rounded-br-full bg-blue-700 p-[4px] w-fit text-white">
@@ -638,7 +685,9 @@ const Main = () => {
               <Image
                 class="md:h-full rounded-md"
                 src="/images/home/car03.png"
-                alt=""
+                alt="sgkllldgt"
+                width={400}
+                height={100}
               />
               <div class="absolute w-full h-32 bg-sky-500 bottom-0 blur-3xl"></div>
               <div class="absolute bottom-0 w-full flex justify-center items-center">
@@ -664,7 +713,9 @@ const Main = () => {
               <Image
                 class="w-96 rounded-t-[40px] border-[12px]"
                 src="/images/home/en-us-phone.jpg"
-                alt=""
+                alt="hdfkl"
+                width={100}
+                height={100}
               />
             </div>
             <div class="item mt-2">
@@ -710,15 +761,19 @@ const Main = () => {
                     <Image
                       class="mb-4"
                       src="/images/home/android-en-us.png"
-                      alt=""
+                      alt="bdfk"
+                      width={100}
+                      height={100}
                     />
-                    <Image src="/images/home/ios-en-us.png" alt="" />
+                    <Image src="/images/home/ios-en-us.png" alt="hdf"             width={100}
+              height={100} />
                   </div>
                   <div class="right">
                     <Image
                       class="rounded-lg w-32 border-2"
                       src="/images/home/download.png"
-                      alt=""
+                      alt="gskd"             width={100}
+                      height={100}
                     />
                   </div>
                 </div>
